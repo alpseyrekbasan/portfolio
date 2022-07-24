@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+
+
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.js"></script>
+
+  <script src="sketch.js"></script>
+  <script src="rotatingarc.js"></script>
+  <!-- <script src="sol.js"></script> -->
+
+
+
+
+  <title></title>
+</head>
+
+
+
+<body>
+
+  <section class="header">
+    <a href="index.html">Basan Studio</a>
+  </section>
+
+  <div id="myCanvas">
+
+  </div>
+
+  <div class="accordionContainer">
+    <div class="accordion">
+      <div class="accordion-item" id="first">
+        <a class="about" onclick="elementClicked('first')">About</a>
+        <div class="center">
+
+
+          <p class="aboutText">Hello! My name is Alp and I am a multidisciplinary artist and designer.
+            I work primarily with sound, video, creative coding, and graphic design.
+            I'm into creating digital tools, building websites, and designing album covers.
+            Check out my projects under the works section or get in touch with me through the addresses on the contact tab.
+            <br><br>
+
+
+        </div>
+      </div>
+      <div class="accordion-item" id="cvandbiopage">
+        <a class="about" onclick="elementClicked('cvandbiopage')">CV & Biography</a>
+
+        <div class="float-parent-element">
+          <div class="float-child-element">
+            <div class="left">
+              <p id="cvText"> Curriculum Vitae <br>
+                Alp Seyrekbasan<br>
+                born in Istanbul, Turkey, 1994.<br>
+                seyrekbasan.alp[at]gmail.com<br>
+                <br>
+                <br>
+                EDUCATION
+                <br>
+                <br>
+                2018
+                <br>
+                <br>
+                Bachelor of Fine Arts, School of the Art Institute of Chicago, Chicago, IL.
+                <br>
+                <br>
+                2013
+                <br>
+                <br>
+                Abitur, Deutsche Schule Istanbul, Istanbul, Turkey
+                <br>
+                <br>
+                PERFORMANCES, SCREENINGS, EXHIBITIONS
+                <br>
+                <br>
+                2017
+                <br>
+                <br>
+                Tiny Garage Experimental Sound Series, Dfbrl8r Gallery, Chicago IL
+                Film, Video, New Media, Animation and Sound Festival, Gene Siskel Film Center. Chicago, IL.
+                Bibliodérive 2017, Flaxman Library. Chicago, IL.
+                <br>
+                <br>
+                2016
+                <br>
+                <br>
+                Semi-Signals, Archer Beach Haus, Chicago, IL.
+                Public Excess Launch Party, Archer Beach Haus, Chicago, IL.
+                Bubblegum Octopus - Violet Systems + Parasetamol = wrtch, The Question Mark Space, Chicago IL.
+                Lower Automation / GRMLNZ / Mermaid N.V. / Wrtch / Parasetamol, Archer Beach Haus, Chicago IL.
+                Date Date Date, 4E Art Gallery , Chicago, IL.
+                Too Dark for a Light Show, Tom Robinson Gallery, Chicago, IL.
+                Waveforms, Tom Robinson Gallery, Chicago IL.
+                <br>
+                <br>
+                2015
+                <br>
+                <br>
+                This time it’s real, Elastic Arts Organization, Chicago, IL.
+                V ROOM, Iridium Clothing Co, Chicago, IL.
+                BYOB (Bring Your Own Beamer), Ballroom Projects, Chicago, IL.
+                Oceans of Jupiter, TCC Chicago, Chicago, IL.
+                DEMO Chicago: The International Demonstration of Contemporary and Modern Art, TCC Chicago, Chicago, IL.
+                I-Ching Derive, Flaxman Library, Chicago, IL.
+                virtualpublic.network. Palmer House Hilton. Chicago, IL.
+                NO MEDIA, No Nation, Chicago, IL.
+                Shoppers in the Closet, Archer Beach Haus, Chicago, IL.
+                <br>
+                <br>
+
+                2014
+                <br>
+                <br>
+                School of the Art Institute of Chicago MFA Performance Festival, SAIC Colombus building, Chicago, IL
+                <br>
+                <br>
+                ORGANIZATORIAL
+                <br>
+                <br>
+                2016
+                <br><br>
+                Strawberry Milkshakes, Archer Beach Haus, Chicago, IL.
+                Lo-Res.Rocks/Banana Milkshakes, House Show, Chicago IL.
+                <br>
+                <br>
+                2014
+                <br>
+                <br>
+                Trialhood, House Show, Chicago IL
+                <br>
+                <br>
+                INTERNSHIPS
+                <br>
+                <br>
+                2017
+                <br>
+                <br>
+                Artist Assistant for Kurt Hentschläger, Humanew LLC, Chicago, IL
+                <br>
+                <br>
+                2015
+                <br>
+                <br>
+                Design & Marketing Intern, Kromozom Advertisement Agency, Istanbul, Turkey.
+                <br>
+                <br>
+                TEACHING
+                <br>
+                <br>
+                2017
+                <br>
+                <br>
+                Artist Talk & No-Input Mixing Demonstration, Approaches to Live Electronics, University of Chicago, Chicago IL.
+                <br>
+                <br>
+                2015
+                <br>
+                <br>
+                Teaching Assistant, Contemporary Practices Department School of the Art Institute of Chicago, Chicago, IL.
+                <br><br>
+                VOLUNTEER
+                <br>
+                <br>
+                2018
+                Tech-Check Assistant, 2018 SAIC Film, Video, New Media, Animation, and Sound Festival, Gene Siskel Film Center, Chicago, IL
+                Event Assistant, Keep Your Options Open II by Experimental Sound Studio, Fulton Street Collective, Chicago, IL
+                <br><br><br><br><br><br><br><br><br><br><br><br>
+            </div>
+            </p>
+          </div>
+          <div class="float-child-element">
+            <div class="right">
+              <p id="bioText">
+                My name is Alp. I was born in 1994 in Istanbul. I studied in a German High School and graduated with Abitur. After that I attended School of the Art Institute of Chicago, where I earned my Bachelor of Fine Arts degree.
+                <br><br>
+                I have been working with design from an early age. My first works consist of graffiti drawings and that’s how I got into graphic design essentially. I visited an art studio in Istanbul where I learned the basics of
+                drawing and design. After learning traditional methods of drawing I grew an interest in media based art. I produced new media projects that incorporate, sound and video, as well as works that create sound and visuals automatically via
+                programming(generative art).
+                <br><br>
+                Although my most recent works are experimental, I tend to create works that are playful. However that is not the full scope of my practice. I also aim to create evocative atmospheres for viewers and create novel experiences via media
+                technologies.
+                <br><br><br><br><br><br><br><br><br><br><br><br>
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+      <!--Works -->
+      <div class="accordion-item" id="secondChange">
+        <a class="works" onclick="elementClicked('secondChange')"> Works</a>
+
+        <a onclick="rotateArc();" id="rotatingArcs"> Rotating Arcs </a>
+        <a onclick="startSolar();" id="sol"> Sol </a>
+
+        <div id="c1"></div>
+
+
+
+      </div>
+      <!-- Works-end -->
+
+      <!-- Contact -->
+      <div class="accordion-item" id="third">
+        <a class="contact" onclick="elementClicked('third')"> Contact</a>
+        <div class="center">
+          <p class="contactText">
+            E-mail: seyrekbasan.alp@gmail.com
+            <br><br>
+            Instagram: @graphic.basan, @alp.seyrek.basan
+            <br><br>
+            Vimeo: vimeo.com/user25017406
+            <br><br>
+            Soundcloud: soundcloud.com/alpseyrekbasan
+          </p>
+        </div>
+        <!-- Contact-end -->
+
+
+      </div>
+    </div>
+  </div>
+  <script src="scripts.js"></script>
+
+
+
+
+
+</body>
+
+</html>
