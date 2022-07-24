@@ -1,0 +1,312 @@
+@import url('https://rsms.me/inter/inter.css');
+
+html {
+  font-family: 'Inter', sans-serif;
+}
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: 'Inter var', sans-serif;
+  }
+}
+
+body {
+  margin: 0;
+  background-color: #F8F8F8;
+  overflow: hidden;
+}
+
+canvas {
+  // border: solid;
+  // border-color: red;
+}
+
+.header {
+  position: relative;
+  height: 40px;
+  padding-bottom: 5px;
+  border: solid;
+  border-width: 1.5px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+
+a {
+  position: relative;
+  top: 12px;
+  padding-left: 10px;
+  width: auto;
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+  vertical-align: middle;
+  z-index: 99999;
+}
+
+#cvandbio {
+  position: static;
+  padding: 0;
+  margin: 0;
+  width: auto;
+  text-decoration: none;
+  cursor: pointer;
+  vertical-align: baseline;
+}
+
+#myCanvas {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 96vh;
+}
+
+.accordionContainer {
+  position: relative;
+  height: 96vh;
+  cursor: none;
+}
+
+//ABOUT
+
+.aboutText {
+  font-size: calc(12px + 0.5vw);
+  line-height: calc(20px + 0.5vw);
+}
+
+.center {
+  position: relative;
+  top: calc(24vh);
+  margin: auto;
+  width: 55vw;
+  padding: 10px;
+}
+//About
+#first {
+  border: solid;
+  border-width: 1.5px;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+}
+
+#cvandbiopage {
+border: solid;
+border-width: 1.5px;
+border-bottom: none;
+border-left: none;
+border-right: none;
+
+width: 100%;
+}
+
+#cvText{
+    margin: 10px;
+  font-size: calc(10px + 0.5vw);
+}
+
+#bioText{
+    margin: 10px;
+  font-size: calc(10px + 0.5vw);
+}
+
+
+.float-parent-element {
+    width: 100%;
+    margin-top: 30px;
+
+}
+.float-child-element {
+    float: left;
+    width: 50%;
+
+
+}
+.left {
+    // background-color: red;
+    margin-left: 0%;
+    height: calc(100vh - 270px);
+    border: solid;
+    border-left: 0px;
+    border-bottom: 0px;
+    border-width: 1.5px;
+overflow-y: scroll;
+}
+.right {
+    margin-left: 0%;
+    height: calc(100vh - 270px);
+    // background-color: yellow;
+    border: solid;
+    border-left: 0px;
+    border-bottom: 0px;
+    border-width: 1.5px;
+    overflow-y: scroll;
+}
+
+#CV {
+  margin-left: 10px;
+  margin-top: 15px;
+
+}
+
+#Biography {
+  margin-left: 10px;
+  margin-top: 15px;
+
+}
+
+//Works
+#secondChange {
+  border: solid;
+  border-width: 1.5px;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  z-index: 999;
+  overflow-y: scroll;
+}
+
+#c1{
+  position: relative;
+  top: -240px;
+}
+
+
+#c2{
+  // position: relative;
+
+}
+#rotatingArcs{
+  display: block;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+#sol {
+  display: block;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+//Contact
+#third {
+  border: solid;
+  border-width: 1.5px;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+}
+
+.contactText {
+  margin-left: 10px;
+  font-size: calc(10px + 0.5vw);
+  text-align: center;
+}
+//Accordion
+.accordion {
+  width: 100%;
+  position: absolute;
+  bottom: 0vh;
+  font-size: 40px;
+  cursor: default;
+
+  &-item {
+    background-color: #F8F8F8;
+    padding-top: 0;
+    height: 80px;
+    overflow: hidden;
+  }
+}
+
+.opened {
+  height: calc(96vh - 240px);
+  animation: 0.5s slide;
+}
+
+
+.closed {
+  height: 80px;
+  animation: 0.5s slideOut;
+}
+
+@keyframes slide {
+  0% {
+    height: 80px;
+  }
+
+  100% {
+    height: calc(96vh - 240px);
+  }
+}
+@keyframes slideOut {
+  0% {
+    height: calc(96vh - 240px);
+  }
+
+  100% {
+    height: 80px;
+  }
+}
+
+
+    @media screen and (max-width: 600px) {
+      .container {
+        position: relative;
+        height: 94vh;
+      }
+
+      .aboutText {
+        margin-left: 10px;
+        font-size: calc(14px + 0.5vw);
+      }
+
+      .center {
+        position: relative;
+        top: calc(10vh);
+        margin: auto;
+        width: 75vw;
+        padding: 10px;
+      }
+
+      .contactText {
+        margin-left: 10px;
+        font-size: calc(14px + 0.5vw);
+        text-align: center;
+      }
+
+      .accordion {
+        width: 100%;
+        position: absolute;
+        bottom: 17px;
+        font-size: 40px;
+      }
+
+      .opened {
+        height: calc(94vh - 240px);
+        animation: 0.5s slide;
+
+      }
+
+      .closed {
+        height: 80px;
+        animation: 0.5s slideOut;
+      }
+      @keyframes slide {
+        0% {
+          height: 80px;
+        }
+
+        100% {
+          height: calc(94vh - 240px);
+        }
+      }
+      @keyframes slideOut {
+        0% {
+          height: calc(94vh - 240px);
+        }
+
+        100% {
+          height: 80px;
+        }
+      }
+    }
