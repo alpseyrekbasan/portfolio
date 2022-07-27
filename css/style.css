@@ -65,6 +65,12 @@ a {
   line-height: calc(20px + 0.5vw);
 }
 
+.aboutText a {
+  padding-left: 0px;
+  position: static;
+  vertical-align: baseline;
+}
+
 .center {
   position: relative;
   top: 24vh;
@@ -91,13 +97,13 @@ a {
 }
 
 #cvText {
-  margin: 10px;
-  font-size: calc(10px + 0.5vw);
+  margin: calc(10px + 2vw);
+  font-size: calc(8px + 0.5vw);
 }
 
 #bioText {
-  margin: 10px;
-  font-size: calc(10px + 0.5vw);
+  margin: calc(10px + 2vw);
+  font-size: calc(8px + 0.5vw);
 }
 
 .float-parent-element {
@@ -147,24 +153,29 @@ a {
   border-left: none;
   border-right: none;
   z-index: 999;
-  overflow-y: scroll;
+  overflow: none;
 }
 
-#c1 {
+li {
   position: relative;
-  top: -240px;
+  margin-left: 10px;
+  top: 0px;
+  font-size: 20px;
+  list-style-type: none;
 }
 
-#rotatingArcs {
+li a {
   display: block;
-  font-size: 20px;
-  margin-top: 20px;
+  margin-top: 2vh;
 }
 
-#sol {
-  display: block;
-  font-size: 20px;
-  margin-top: 20px;
+iframe {
+  position: relative;
+  top: -290px;
+  left: -10px;
+  width: 100vw;
+  height: calc(100vh - 270px);
+  border: none;
 }
 
 #third {
@@ -176,9 +187,12 @@ a {
 }
 
 .contactText {
-  margin-left: 10px;
   font-size: calc(10px + 0.5vw);
   text-align: center;
+}
+
+.contactText a {
+  padding-left: 0px;
 }
 
 .accordion {
