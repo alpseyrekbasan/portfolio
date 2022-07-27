@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.4.2/lib/p5.js"></script>
+
+</head>
+
+<body>
+
+  <script type="text/javascript">
+
+
+var threedarcs = p => {
+
+  var x = 1;
+  var numberOf= 72;
+  var y=0;
+  var w=0;
+  var h=0;
+  var m=0;
+
+
+  p.setup = function() {
+  	p.createCanvas(p.windowWidth,p.windowHeight, p.WEBGL)
+  	p.angleMode(p.DEGREES);
+    // put setup code here
+  }
+
+  p.draw = function() {
+    // put drawing code here
+    p.background(248)
+    p.stroke(0);
+    p.smooth()
+    p.rotateX(60)
+    p.rotate(y--)
+    p.fill(248);
+
+
+
+
+  	for (var j = 0; j <= 360 ; j+=60) {
+
+
+        p.rotateX(j/2);
+  			p.rotateY(m/1000 *j);
+
+  			for (var i = 0; i <= numberOf ; i++) {
+
+    			p.rotate(360/numberOf);
+
+  			var n1 = p.map(p.noise(i,m/100),0,1,0,750)
+
+    			p.arc(0 ,0, w+ n1, h+ n1, -x, x, p.PIE);
+    		}
+
+  	}
+
+
+
+    p.fill(0);
+    p.sphere(p.map(p.noise(x,p.frameCount/100),0,1,0,100),24,24)
+    m++;
+  }
+
+
+
+
+
+    p.windowResized = function() {
+      p.background(248);
+
+      p.resizeCanvas(p.windowWidth, p.windowHeight);
+    }
+
+}
+
+new p5(threedarcs);
+
+  </script>
+</body>
+
+</html>

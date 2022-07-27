@@ -74,6 +74,13 @@ a {
   line-height: calc(20px + 0.5vw);
 }
 
+.aboutText a {
+  padding-left: 0px;
+  position: static;
+  vertical-align: baseline;
+
+}
+
 .center {
   position: relative;
   top: calc(24vh);
@@ -96,18 +103,17 @@ border-width: 1.5px;
 border-bottom: none;
 border-left: none;
 border-right: none;
-
 width: 100%;
 }
 
 #cvText{
-    margin: 10px;
-  font-size: calc(10px + 0.5vw);
+  margin: calc(10px + 2vw);
+  font-size: calc(8px + 0.5vw);
 }
 
 #bioText{
-    margin: 10px;
-  font-size: calc(10px + 0.5vw);
+  margin: calc(10px + 2vw);
+  font-size: calc(8px + 0.5vw);
 }
 
 
@@ -163,31 +169,33 @@ overflow-y: scroll;
   border-left: none;
   border-right: none;
   z-index: 999;
-  overflow-y: scroll;
+  overflow: none;
 }
 
-#c1{
+li{
   position: relative;
-  top: -240px;
-}
-
-
-#c2{
-  // position: relative;
-
-}
-#rotatingArcs{
-  display: block;
+  margin-left: 10px;
+  top: 0px;
   font-size: 20px;
-  margin-top: 20px;
+  list-style-type: none;
 }
 
-#sol {
+
+li a{
   display: block;
-  font-size: 20px;
-  margin-top: 20px;
+  margin-top: 2vh;
+
 }
 
+iframe{
+  position: relative;
+  top: -290px;
+  left:-10px;
+  width: 100vw;
+  height: calc(100vh - 270px);
+  border: none;
+  // border-color: red;
+}
 //Contact
 #third {
   border: solid;
@@ -198,9 +206,12 @@ overflow-y: scroll;
 }
 
 .contactText {
-  margin-left: 10px;
   font-size: calc(10px + 0.5vw);
   text-align: center;
+}
+
+.contactText a{
+  padding-left: 0px;
 }
 //Accordion
 .accordion {

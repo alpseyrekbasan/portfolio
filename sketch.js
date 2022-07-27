@@ -11,7 +11,7 @@ function setup() {
 function draw(){
   background(248,45);
   fill(0);
-  circle(mouseX,mouseY,50);
+  circle(mouseX,mouseY,40);
 
 }
 

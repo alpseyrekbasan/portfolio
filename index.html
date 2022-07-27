@@ -11,8 +11,9 @@
   <script src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.js"></script>
 
   <script src="sketch.js"></script>
-  <script src="rotatingarc.js"></script>
-  <!-- <script src="sol.js"></script> -->
+
+
+
 
 
 
@@ -39,10 +40,8 @@
         <div class="center">
 
 
-          <p class="aboutText">Hello! My name is Alp and I am a multidisciplinary artist and designer.
-            I work primarily with sound, video, creative coding, and graphic design.
-            I'm into creating digital tools, building websites, and designing album covers.
-            Check out my projects under the works section or get in touch with me through the addresses on the contact tab.
+          <p class="aboutText"> Hello! My name is Alp. I am a multidisciplinary artist and designer working with sound, video, and code. I create digital tools, build websites, and design posters & album covers.
+            Head over to the works section for a quick demo of my creative coding projects or check out my instgram account <a href="https://instagram.com/graphic.basan">graphic.basan</a> for my design works. Other projects such as video and sound art can be found on my <a href="https://soundcloud.com/alpseyrekbasan">soundcloud</a> and <a href="https://vimeo.com/user25017406">vimeo</a> pages. If you have any questions or want to get in touch with me feel free to hit me up through the channels written in the contact section of this website.
             <br><br>
 
 
@@ -54,7 +53,8 @@
         <div class="float-parent-element">
           <div class="float-child-element">
             <div class="left">
-              <p id="cvText"> Curriculum Vitae <br>
+              <p id="cvText">
+                Curriculum Vitae <br>
                 Alp Seyrekbasan<br>
                 born in Istanbul, Turkey, 1994.<br>
                 seyrekbasan.alp[at]gmail.com<br>
@@ -140,7 +140,7 @@
                 2017
                 <br>
                 <br>
-                Artist Assistant for Kurt Hentschläger, Humanew LLC, Chicago, IL
+                Artist Assistant for Media Artist Kurt Hentschläger, Humanew LLC, Chicago, IL
                 <br>
                 <br>
                 2015
@@ -176,14 +176,11 @@
           <div class="float-child-element">
             <div class="right">
               <p id="bioText">
-                My name is Alp. I was born in 1994 in Istanbul. I studied in a German High School and graduated with Abitur. After that I attended School of the Art Institute of Chicago, where I earned my Bachelor of Fine Arts degree.
-                <br><br>
-                I have been working with design from an early age. My first works consist of graffiti drawings and that’s how I got into graphic design essentially. I visited an art studio in Istanbul where I learned the basics of
-                drawing and design. After learning traditional methods of drawing I grew an interest in media based art. I produced new media projects that incorporate, sound and video, as well as works that create sound and visuals automatically via
-                programming(generative art).
-                <br><br>
-                Although my most recent works are experimental, I tend to create works that are playful. However that is not the full scope of my practice. I also aim to create evocative atmospheres for viewers and create novel experiences via media
-                technologies.
+                  I was born in 1994 in Istanbul. I graduated from the School of the Art Institute of Chicago in 2018 with a Bachelor of Fine Arts degree. I have been working as a freelance artist and designer since my graduation, and doing side projects such as translation and video editing.
+                  <br><br>
+                  
+                  <br><br>
+
                 <br><br><br><br><br><br><br><br><br><br><br><br>
               </p>
             </div>
@@ -196,12 +193,15 @@
       <div class="accordion-item" id="secondChange">
         <a class="works" onclick="elementClicked('secondChange')"> Works</a>
 
-        <a onclick="rotateArc();" id="rotatingArcs"> Rotating Arcs </a>
-        <a onclick="startSolar();" id="sol"> Sol </a>
-
-        <div id="c1"></div>
-
-
+        <li>
+        <a onclick="loadSketch('sketches/vault/vault.html');" id="vault"> Vault</a>
+        <a onclick="loadSketch('sketches/movingarcs/movingarcs.html');" id="movingarcs"> Moving Arcs</a>
+        <a onclick="loadSketch('sketches/Sol/sol.html');" id="sol"> Sol </a>
+        <a onclick="loadSketch('sketches/threedarcs/threedarcs.html');" id="threedarcs"> Noise Flow </a>
+        <a onclick="loadSketch('sketches/movinggrid/movinggrid.html');" id="movinggrid"> Fluid Grid </a>
+        <!-- <a onclick="loadSketch('sketches/scanlines/scanlines.html');" id="scanlines"> Scan Lines </a> -->
+        <iframe id="sketch-frame"></iframe>
+        </li>
 
       </div>
       <!-- Works-end -->
@@ -211,13 +211,13 @@
         <a class="contact" onclick="elementClicked('third')"> Contact</a>
         <div class="center">
           <p class="contactText">
-            E-mail: seyrekbasan.alp@gmail.com
+            seyrekbasan.alp@gmail.com
             <br><br>
-            Instagram: @graphic.basan, @alp.seyrek.basan
+            <a href="https://www.instagram.com/graphic.basan/" target=”_blank”>@graphic.basan</a>
             <br><br>
-            Vimeo: vimeo.com/user25017406
+            <a href="https://vimeo.com/user25017406" target=”_blank”>Vimeo</a>
             <br><br>
-            Soundcloud: soundcloud.com/alpseyrekbasan
+            <a href="https://soundcloud.com/alpseyrekbasan" target=”_blank”>Soundcloud</a>
           </p>
         </div>
         <!-- Contact-end -->
@@ -226,10 +226,21 @@
       </div>
     </div>
   </div>
-  <script src="scripts.js"></script>
+  <script src="slider.js"></script>
 
+  <script>
 
+    async function loadSketch (path) {
+      const res = await window.fetch(path)
+      const data = await res.text()
+      const iframe = document.querySelector('#sketch-frame')
+      const content = iframe.contentDocument || iframe.contentWindow.document
+      content.open()
+      content.write(data)
+      content.close()
+    }
 
+  </script>
 
 
 </body>
